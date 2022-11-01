@@ -33,6 +33,15 @@ describe Application do
       expect(response.status).to eq(200)
       expect(response.body).to eq("Alice,Joe,Julia,Kieran,Zoe")
     end
+    it "returns 200 with names sorted" do
+      # Send a get request to /sort-names
+      # and returns a response we can test
+      response = post("/sort-names?names=Zebedee,Alex,Tom,Karen,Jennie")
+  
+      # Assert the response status code and body
+      expect(response.status).to eq(200)
+      expect(response.body).to eq("Alex,Jennie,Karen,Tom,Zebedee")
+    end  
   end
 
 end
