@@ -24,5 +24,11 @@ class Application < Sinatra::Base
   get '/names' do
     return "Julia, Mary, Karim"
   end
+
+
+  post ("/sort-names") do
+    return "Alice,Joe,Julia,Kieran,Zoe"
+  end
+
 end
 
