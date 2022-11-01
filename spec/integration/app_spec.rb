@@ -27,7 +27,7 @@ describe Application do
     it "returns 200 with names sorted" do
       # Send a get request to /sort-names
       # and returns a response we can test
-      response = post("/sort-names?names='Joe,Alice,Zoe,Julia,Kieran'")
+      response = post("/sort-names?names=Joe,Alice,Zoe,Julia,Kieran")
 
       # Assert the response status code and body
       expect(response.status).to eq(200)
